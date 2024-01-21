@@ -6,6 +6,18 @@ networks:
 
 services:
 
+# jellyseerr:
+#  image: fallenbagel/jellyseerr:latest
+#  container_name: jellyseerr
+#  environment:
+#      - LOG_LEVEL=debug
+#      - TZ=Europe/Oslo
+#  ports:
+#      - 5055:5055
+#  volumes:
+#      - /home/jellyseerr/appdata/config:/app/config
+#  restart: unless-stopped
+
  prowlarr: #indexer manager for Sonarr & Radarr
   image: ghcr.io/linuxserver/prowlarr:develop
   container_name: prowlarr
