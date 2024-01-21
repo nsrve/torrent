@@ -18,6 +18,28 @@ services:
 #      - /home/jellyseerr/appdata/config:/app/config
 #  restart: unless-stopped
 
+
+#  bazarr:
+#   image: lscr.io/linuxserver/bazarr:latest
+#   container_name: bazarr
+#   environment:
+#     - PUID=1000
+#     - PGID=1000
+#     - TZ=Europe/Oslo
+#   volumes:
+#     - /home/bazarr/config:/config
+#     - jelly:/data/torrents
+#     - /path/to/movies:/movies #optional
+#     - /path/to/tv:/tv #optional
+#   ports:
+#     - 6767:6767
+#   restart: unless-stopped
+
+volumes:
+  jelly:
+    external: true
+
+
  prowlarr: #indexer manager for Sonarr & Radarr
   image: ghcr.io/linuxserver/prowlarr:develop
   container_name: prowlarr
